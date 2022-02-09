@@ -1,0 +1,29 @@
+<h2>Parking Slot Details</h2> 
+
+<hr/>
+<div *ngIf="parking">
+  <div>
+    <label><b>Owner Name: </b></label> {{parking.ownerName}}
+  </div>
+  <div>
+    <label><b>Email Id: </b></label> {{parking.emailId}}
+  </div>  
+  <div>
+    <label><b>Car Name: </b></label> {{parking.carName}}
+  </div>
+  <div>
+    <label><b>Car Number: </b></label> {{parking.carNumber}}
+  </div>
+  <div>
+    <label><b>Entry Time: </b></label> {{parking.entryTime}}
+  </div>
+  <div>
+    <label><b>Exit Time: </b></label> {{parking.exitTime}}
+  </div>
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary "> Back to Parking List</button><br>
+
+

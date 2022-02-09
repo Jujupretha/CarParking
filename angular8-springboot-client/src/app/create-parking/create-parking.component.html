@@ -1,0 +1,41 @@
+<h3>Book Your Slot</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group ">
+      <label for="name">Owner Name</label>
+      <input type="text" class="form-control" id="ownerName" required [(ngModel)]="parking.ownerName" name="ownerName">
+    </div>
+
+    <div class="form-group ">
+      <label for="name">Email Id</label>
+      <input type="text" class="form-control" id="emailId" required [(ngModel)]="parking.emailId" name="emailId">
+    </div>
+
+    <div class="form-group ">
+      <label for="name">Car Name</label>
+      <input type="text" class="form-control" id="carName" required [(ngModel)]="parking.carName" name="carName">
+    </div>
+
+    <div class="form-group ">
+      <label for="name">Car Number</label>
+      <input type="text" class="form-control" id="carNumber" required [(ngModel)]="parking.carNumber" name="carNumber">
+    </div>
+
+    <div class="form-group ">
+      <label for="name">Entry Time</label>
+      <input type="text" class="form-control" id="entryTime" required [(ngModel)]="parking.entryTime" name="entryTime" type="datetime-local">
+    </div>
+
+    <div class="form-group ">
+      <label for="name">Exit Time</label>
+      <input type="text" class="form-control" id="exitTime" required [(ngModel)]="parking.exitTime" name="exitTime" type="datetime-local">
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>You submitted successfully!</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>

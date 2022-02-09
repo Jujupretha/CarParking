@@ -1,0 +1,37 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Booked Parking List</h2>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped" >
+      <thead>
+        <tr>
+          <th>OwnerName</th>
+          <th>Email</th>
+          <th>CarName</th>
+          <th>CarNo:</th>
+          <th>EntryTime</th>
+          <th>ExitTime</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let parking of parkings | async">
+          <td>{{parking.ownerName}}</td>
+          <td>{{parking.emailId}}</td>
+          <td>{{parking.carName}}</td>
+          <td>{{parking.carNumber}}</td>
+          <td>{{parking.entryTime}}</td>
+          <td>{{parking.exitTime}}</td>
+           <td>
+             <button (click)="deleteParking(parking.id)"  class="btn btn-default btn-sm glyphicon glyphicon-trash" style="margin-left: 10px"></button>
+              <button (click)="updateParking(parking.id)" class="btn btn-default btn-sm glyphicon glyphicon-pencil" style="margin-left: 10px"></button>
+              <button (click)="parkingDetails(parking.id)" class="btn btn-default btn-sm glyphicon glyphicon-info-sign" style="margin-left: 10px"></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
